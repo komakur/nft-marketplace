@@ -9,7 +9,7 @@ import 'package:flutter/widgets.dart';
 
 // TODO: rename this file to icon_constants.dart
 
-class NFTMarketplaceIcons {
+abstract class NFTMarketplaceIcons {
   NFTMarketplaceIcons._();
 
   static const String _fontFamily = 'NFT-Marketplace-icons';
