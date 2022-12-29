@@ -17,21 +17,34 @@ class _SingUpFormState extends State<SingUpForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-        child: Column(
-      children: const [
-        CustomTextFormField(
-            prefixIcon: Icon(NFTMarketplaceIcons.kUser, size: 20.0),
-            hintText: 'Username'),
-        CustomTextFormField(
-            prefixIcon: Icon(NFTMarketplaceIcons.kEnvelop, size: 20.0),
-            hintText: 'Email Address'),
-        CustomTextFormField(
-            prefixIcon: Icon(NFTMarketplaceIcons.kLockKey, size: 20.0),
-            hintText: 'Password'),
-        CustomTextFormField(
-            prefixIcon: Icon(NFTMarketplaceIcons.kLockKey, size: 20.0),
-            hintText: 'Confirm Password')
-      ],
-    ));
+      child: Column(
+        children: [
+          const CustomTextFormField(
+              prefixIcon: Icon(NFTMarketplaceIcons.kUser, size: 20.0),
+              hintText: 'Username'),
+          const CustomTextFormField(
+              prefixIcon: Icon(NFTMarketplaceIcons.kEnvelop, size: 20.0),
+              hintText: 'Email Address'),
+          const CustomTextFormField(
+              prefixIcon: Icon(NFTMarketplaceIcons.kLockKey, size: 20.0),
+              hintText: 'Password'),
+          const CustomTextFormField(
+              prefixIcon: Icon(NFTMarketplaceIcons.kLockKey, size: 20.0),
+              hintText: 'Confirm Password'),
+          const SizedBox(
+            height: 15.0,
+          ),
+          ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                'Create Account',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium!
+                    .copyWith(fontWeight: FontWeight.w600),
+              )),
+        ],
+      ),
+    );
   }
 }

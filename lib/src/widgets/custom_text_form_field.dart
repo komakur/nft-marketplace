@@ -9,11 +9,14 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      decoration: InputDecoration(
-        fillColor: Colors.white,
-        prefixIcon: prefixIcon,
-        hintText: hintText,
+    return Padding(
+      padding: EdgeInsets.only(bottom: 15.0),
+      child: TextFormField(
+        decoration: InputDecoration(
+          filled: true,
+          prefixIcon: prefixIcon,
+          hintText: hintText,
+        ),
       ),
     );
   }
