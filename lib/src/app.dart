@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nft_marketplace/src/sign_up.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen.dart';
+
+import 'package:nft_marketplace/themes/main_theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -7,10 +9,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
-      home: const Scaffold(
-        body: SignUp(),
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: MainTheme.theme,
+      home: const Homepage(),
     );
   }
 }
