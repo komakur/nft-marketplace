@@ -54,7 +54,7 @@ class MainTheme {
       ),
       // caption text (named in figma)
       bodySmall: _base.bodySmall!.copyWith(
-        color: ColorConstants.kText,
+        color: ColorConstants.kCaptionAndLabel,
         fontFamily: 'WorkSans',
         fontWeight: FontWeight.w400,
         fontSize: 12.0,
