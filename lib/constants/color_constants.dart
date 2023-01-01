@@ -15,8 +15,14 @@ abstract class ColorConstants {
   static const kCallToAction = Color(0xFFA259FF);
 
   // gradients
-  static const kPurpleBlueGradiend =
-      LinearGradient(colors: [Color(0xFFA259FF), Color(0xFF377DF7)]);
+  static final kPurpleBlueGradiend = LinearGradient(
+    begin: Alignment.bottomCenter,
+    end: Alignment.topCenter,
+    colors: [
+      Color(0xFFA259FF).withOpacity(1),
+      Color(0xFF377DF7).withOpacity(0.0),
+    ],
+  );
   static const kPurpleRedGradient =
       LinearGradient(colors: [Color(0xFFA259FF), Color(0xFFFF6250)]);
 }
