@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/constants/color_constants.dart';
-import 'package:nft_marketplace/src/widgets/artist.dart';
+import 'package:nft_marketplace/src/widgets/artist_logo_name.dart';
 
 class ArtistCard extends StatelessWidget {
   const ArtistCard({
@@ -39,7 +39,7 @@ class ArtistCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 const SizedBox(height: 10.0),
-                const Artist(
+                const ArtistLogoName(
                   artistName: 'Animakid',
                   avatarUrl: '/images/avatar.png',
                 ),

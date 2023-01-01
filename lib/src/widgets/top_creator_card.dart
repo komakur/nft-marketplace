@@ -64,6 +64,7 @@ class TopCreatorCard extends StatelessWidget {
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
               const SizedBox(height: 5.0),
+              // TODO change to Row (or check alignment for RichText children)
               RichText(
                 text: TextSpan(children: [
                   TextSpan(
