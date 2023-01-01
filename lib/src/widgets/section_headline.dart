@@ -16,6 +16,9 @@ class SectionHeadline extends StatelessWidget {
           style:
               Theme.of(context).textTheme.headlineMedium!.copyWith(height: 1.4),
         ),
+        const SizedBox(
+          height: 10.0,
+        ),
         subheading == null
             ? const SizedBox.shrink()
             : Text(
@@ -25,6 +28,7 @@ class SectionHeadline extends StatelessWidget {
                     .bodyMedium!
                     .copyWith(height: 1.4),
               ),
+        const SizedBox(height: 40.0),
       ],
     );
   }
