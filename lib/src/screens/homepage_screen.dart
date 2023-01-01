@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/constants/color_constants.dart';
 import 'package:nft_marketplace/constants/icons_constants.dart';
+import 'package:nft_marketplace/src/sections/browse_categories_section.dart';
+import 'package:nft_marketplace/src/sections/discover_more_section.dart';
 import 'package:nft_marketplace/src/sections/get_started_section.dart';
+import 'package:nft_marketplace/src/sections/mushrooms_section.dart';
 import 'package:nft_marketplace/src/sections/top_creators_section.dart';
 import 'package:nft_marketplace/src/sections/trending_collection_section.dart';
 
@@ -47,17 +50,30 @@ class Homepage extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0),
-        child: ListView(
-          children: const [
-            GetStartedSection(),
-            SizedBox(height: 80.0),
-            TrendingCollectionSection(),
-            SizedBox(height: 80.0),
-            TopCreatorsSection(),
-          ],
-        ),
+      body: ListView(
+        children: const [
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
+            child: GetStartedSection(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
+            child: TrendingCollectionSection(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
+            child: TopCreatorsSection(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
+            child: BrowseCategoriesSection(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
+            child: DiscoverMoreSection(),
+          ),
+          MushroomsSection(),
+        ],
       ),
     );
   }
