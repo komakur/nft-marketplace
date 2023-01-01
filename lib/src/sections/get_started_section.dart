@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nft_marketplace/constants/icons_constants.dart';
 import 'package:nft_marketplace/src/widgets/artist_card.dart';
 import 'package:nft_marketplace/src/widgets/primiry_button.dart';
+import 'package:nft_marketplace/src/widgets/section_headline.dart';
 
 class GetStartedSection extends StatelessWidget {
   const GetStartedSection({super.key});
@@ -9,27 +10,19 @@ class GetStartedSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      Text(
-        'Discover digital art & Collect NFTs',
-        style:
-            Theme.of(context).textTheme.headlineMedium!.copyWith(height: 1.4),
+      const SectionHeadline(
+        heading: 'Discover digital art & Collect NFTs',
+        subheading:
+            'NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.',
       ),
-      const SizedBox(
-        height: 10.0,
-      ),
-      Text(
-        'NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.',
-        style: Theme.of(context).textTheme.bodyMedium!.copyWith(height: 1.4),
-      ),
-      const Padding(
-          padding: EdgeInsets.symmetric(vertical: 40.0), child: ArtistCard()),
-      PrimaryButton(
-        text: 'Get Started',
-        icon: NFTMarketplaceIcons.kRocketLaunch,
-        onPressed: () {},
-      ),
-      const SizedBox(
-        height: 40.0,
+      const ArtistCard(),
+      Padding(
+        padding: const EdgeInsets.symmetric(vertical: 40.0),
+        child: PrimaryButton(
+          text: 'Get Started',
+          icon: NFTMarketplaceIcons.kRocketLaunch,
+          onPressed: () {},
+        ),
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

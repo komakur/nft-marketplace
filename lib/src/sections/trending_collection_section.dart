@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/constants/color_constants.dart';
-import 'package:nft_marketplace/src/widgets/artist.dart';
+import 'package:nft_marketplace/src/widgets/artist_logo_name.dart';
+import 'package:nft_marketplace/src/widgets/section_headline.dart';
 
 class TrendingCollectionSection extends StatelessWidget {
   const TrendingCollectionSection({super.key});
@@ -10,56 +11,47 @@ class TrendingCollectionSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Trending Collection',
-          style:
-              Theme.of(context).textTheme.headlineMedium!.copyWith(height: 1.4),
+        const SectionHeadline(
+          heading: 'Trending Collection',
+          subheading: 'Checkout our weekly updated trending collection.',
         ),
-        const SizedBox(height: 10),
-        Text(
-          'Checkout our weekly updated trending collection.',
-          style: Theme.of(context).textTheme.bodyMedium!.copyWith(height: 1.4),
-        ),
-        const SizedBox(height: 40.0),
         const ImagePlaceholder(
           height: 315.0,
           imagePath: '/images/dog.png',
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15.0),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const ImagePlaceholder(
-                imagePath: '/images/cat.png',
+        Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const ImagePlaceholder(
+              imagePath: '/images/cat.png',
+            ),
+            const ImagePlaceholder(
+              imagePath: '/images/bear.png',
+            ),
+            Container(
+              alignment: Alignment.center,
+              height: 95.0,
+              width: 95.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.0),
+                color: ColorConstants.kCallToAction,
               ),
-              const ImagePlaceholder(
-                imagePath: '/images/bear.png',
+              child: Text(
+                '1025+',
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    fontWeight: FontWeight.w700, fontFamily: 'SpaceMono'),
               ),
-              Container(
-                alignment: Alignment.center,
-                height: 95.0,
-                width: 95.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
-                  color: ColorConstants.kCallToAction,
-                ),
-                child: Text(
-                  '1025+',
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      fontWeight: FontWeight.w700, fontFamily: 'SpaceMono'),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
         Text(
           'DSGN Animals',
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         const SizedBox(height: 10),
-        const Artist(avatarUrl: '/images/avatar2.png', artistName: 'MrFox'),
+        const ArtistLogoName(
+            avatarUrl: '/images/avatar2.png', artistName: 'MrFox'),
       ],
     );
   }
@@ -76,7 +68,7 @@ class ImagePlaceholder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: height,
       child: Image.asset(imagePath),
     );
