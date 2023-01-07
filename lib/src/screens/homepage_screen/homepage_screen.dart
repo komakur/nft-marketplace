@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/constants/color_constants.dart';
 import 'package:nft_marketplace/constants/icons_constants.dart';
-import 'package:nft_marketplace/src/sections/browse_categories_section.dart';
-import 'package:nft_marketplace/src/sections/discover_more_section.dart';
-import 'package:nft_marketplace/src/sections/get_started_section.dart';
-import 'package:nft_marketplace/src/sections/mushrooms_section.dart';
-import 'package:nft_marketplace/src/sections/top_creators_section.dart';
-import 'package:nft_marketplace/src/sections/trending_collection_section.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen/sections/browse_categories_section.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen/sections/discover_more_section.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen/sections/get_started_section.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen/sections/mushrooms_section.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen/sections/top_creators_section.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen/sections/trending_collection_section.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
