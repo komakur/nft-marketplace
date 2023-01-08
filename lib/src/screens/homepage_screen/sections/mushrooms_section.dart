@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_countdown_timer/countdown.dart';
+import 'package:nft_marketplace/constants/button_accent.dart';
 import 'package:nft_marketplace/constants/color_constants.dart';
 import 'package:nft_marketplace/constants/icons_constants.dart';
 import 'package:nft_marketplace/src/widgets/artist_logo_name.dart';
-import 'package:nft_marketplace/src/widgets/primiry_button.dart';
+import 'package:nft_marketplace/src/widgets/buttons/filled_button.dart';
 
 class MushroomsSection extends StatelessWidget {
   const MushroomsSection({super.key});
@@ -57,48 +59,73 @@ class MushroomsSection extends StatelessWidget {
                         fontFamily: 'SpaceMono', color: ColorConstants.kText),
                   ),
                   const SizedBox(height: 10.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const TimerColumn(
-                        unitValue: '59',
-                        unitLabel: 'Hours',
-                      ),
-                      Text(
-                        ':',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(fontFamily: 'SpaceMono'),
-                      ),
-                      const TimerColumn(
-                        unitValue: '59',
-                        unitLabel: 'Minutes',
-                      ),
-                      Text(
-                        ':',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(fontFamily: 'SpaceMono'),
-                      ),
-                      const TimerColumn(
-                        unitValue: '59',
-                        unitLabel: 'Seconds',
-                      )
-                    ],
-                  )
+                  Timer(
+                    endDate: DateTime.now(),
+                  ),
                 ],
               ),
             ),
-            PrimaryButton(
+            FilledButton(
                 icon: NFTMarketplaceIcons.kEye,
+                backgroundColor: ColorConstants.kText,
+                foregroundColor: ColorConstants.kCallToAction,
+                buttonAccent: ButtonAccent.secondary,
                 text: 'See NFT',
                 onPressed: () {}),
           ],
         ),
       ),
+    );
+  }
+}
+
+class Timer extends StatefulWidget {
+  final DateTime endDate;
+  const Timer({
+    super.key,
+    required this.endDate,
+  });
+
+  @override
+  State<Timer> createState() => _TimerState();
+}
+
+class _TimerState extends State<Timer> {
+  final currentTime = DateTime.now();
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const TimerColumn(
+          unitValue: '59',
+          unitLabel: 'Hours',
+        ),
+        Text(
+          ':',
+          style: Theme.of(context)
+              .textTheme
+              .headlineMedium!
+              .copyWith(fontFamily: 'SpaceMono'),
+        ),
+        const TimerColumn(
+          unitValue: '59',
+          unitLabel: 'Minutes',
+        ),
+        Text(
+          ':',
+          style: Theme.of(context)
+              .textTheme
+              .headlineMedium!
+              .copyWith(fontFamily: 'SpaceMono'),
+        ),
+        const TimerColumn(
+          unitValue: '59',
+          unitLabel: 'Seconds',
+        )
+      ],
     );
   }
 }
