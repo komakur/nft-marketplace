@@ -19,6 +19,7 @@ class Homepage extends StatelessWidget {
         backgroundColor: ColorConstants.kBackground,
         automaticallyImplyLeading: false,
         titleSpacing: 0,
+        // TODO: change to logo image
         title: Padding(
           padding: const EdgeInsets.only(left: 30.0),
           child: Row(
@@ -33,7 +34,8 @@ class Homepage extends StatelessWidget {
               Text(
                 'NFT Maketplace',
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    fontFamily: 'WorkSans',
+                    color: ColorConstants.kText,
+                    fontFamily: 'SpaceMono',
                     fontSize: 15.0,
                     fontWeight: FontWeight.w500),
               ),
