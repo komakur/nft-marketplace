@@ -4,6 +4,7 @@ import 'package:nft_marketplace/constants/icons_constants.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/browse_categories_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/discover_more_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/get_started_section.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen/sections/how_it_works_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/mushrooms_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/top_creators_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/trending_collection_section.dart';
@@ -74,7 +75,11 @@ class Homepage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
             child: DiscoverMoreSection(),
           ),
-          MushroomsSection(),
+          Padding(
+            padding: EdgeInsets.only(top: 20.0, bottom: 40.0),
+            child: MushroomsSection(),
+          ),
+          HowItWorksSection(),
         ],
       ),
     );
