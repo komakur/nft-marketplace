@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/constants/icons_constants.dart';
-import 'package:nft_marketplace/src/widgets/custom_outlined_button.dart';
+import 'package:nft_marketplace/src/widgets/buttons/custom_outlined_button.dart';
 import 'package:nft_marketplace/src/widgets/section_headline.dart';
 import 'package:nft_marketplace/src/widgets/top_creator_card.dart';
 import 'package:nft_marketplace/data.dart';
