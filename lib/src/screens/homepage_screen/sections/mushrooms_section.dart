@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_countdown_timer/countdown.dart';
 import 'package:nft_marketplace/constants/button_accent.dart';
 import 'package:nft_marketplace/constants/color_constants.dart';
 import 'package:nft_marketplace/constants/icons_constants.dart';
@@ -13,7 +12,7 @@ class MushroomsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
+      height: 590.0,
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
@@ -25,54 +24,57 @@ class MushroomsSection extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: ColorConstants.kPurpleBlueGradiend,
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: 151.0,
-              height: 44.0,
-              decoration: BoxDecoration(
-                color: ColorConstants.kBackgroundSecondary,
-                borderRadius: BorderRadius.circular(20.0),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 120.0, bottom: 40.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: 151.0,
+                height: 44.0,
+                decoration: BoxDecoration(
+                  color: ColorConstants.kBackgroundSecondary,
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: const ArtistLogoName(
+                  artistName: 'Shroomie',
+                  avatarUrl: '/images/avatar_mushroom.png',
+                  mainAxisAlignment: MainAxisAlignment.center,
+                ),
               ),
-              child: const ArtistLogoName(
-                artistName: 'Shroomie',
-                avatarUrl: '/images/avatar_mushroom.png',
-                mainAxisAlignment: MainAxisAlignment.center,
+              Text('Magic Mashrooms',
+                  style: Theme.of(context).textTheme.displaySmall),
+              Container(
+                padding: const EdgeInsets.all(30.0),
+                decoration: BoxDecoration(
+                  color: ColorConstants.kBackgroundSecondary.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      'Auction ends in:',
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                          fontFamily: 'SpaceMono', color: ColorConstants.kText),
+                    ),
+                    const SizedBox(height: 10.0),
+                    Timer(
+                      endDate: DateTime.now(),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Text('Magic Mashrooms',
-                style: Theme.of(context).textTheme.displaySmall),
-            Container(
-              padding: const EdgeInsets.all(30.0),
-              decoration: BoxDecoration(
-                color: ColorConstants.kBackgroundSecondary.withOpacity(0.5),
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text(
-                    'Auction ends in:',
-                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                        fontFamily: 'SpaceMono', color: ColorConstants.kText),
-                  ),
-                  const SizedBox(height: 10.0),
-                  Timer(
-                    endDate: DateTime.now(),
-                  ),
-                ],
-              ),
-            ),
-            FilledButton(
-                icon: NFTMarketplaceIcons.kEye,
-                backgroundColor: ColorConstants.kText,
-                foregroundColor: ColorConstants.kCallToAction,
-                buttonAccent: ButtonAccent.secondary,
-                text: 'See NFT',
-                onPressed: () {}),
-          ],
+              FilledButton(
+                  icon: NFTMarketplaceIcons.kEye,
+                  backgroundColor: ColorConstants.kText,
+                  foregroundColor: ColorConstants.kCallToAction,
+                  buttonAccent: ButtonAccent.secondary,
+                  text: 'See NFT',
+                  onPressed: () {}),
+            ],
+          ),
         ),
       ),
     );

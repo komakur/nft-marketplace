@@ -10,34 +10,36 @@ class GetStartedSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      const SectionHeadline(
-        heading: 'Discover digital art & Collect NFTs',
-        subheading:
-            'NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.',
-      ),
-      const ArtistCard(),
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 40.0),
-        child: FilledButton(
-          text: 'Get Started',
-          icon: NFTMarketplaceIcons.kRocketLaunch,
-          buttonAccent: ButtonAccent.secondary,
-          onPressed: () {},
+    return Column(
+      children: [
+        const SectionHeadline(
+          heading: 'Discover digital art & Collect NFTs',
+          subheading:
+              'NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.',
         ),
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          ColumnText(
-            textAbove: '240k',
-            textBelow: 'Total Sale',
+        const ArtistCard(),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 40.0),
+          child: FilledButton(
+            text: 'Get Started',
+            icon: NFTMarketplaceIcons.kRocketLaunch,
+            buttonAccent: ButtonAccent.secondary,
+            onPressed: () {},
           ),
-          ColumnText(textAbove: '100k', textBelow: 'Auctions'),
-          ColumnText(textAbove: '240k', textBelow: 'Artists'),
-        ],
-      )
-    ]);
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            ColumnText(
+              textAbove: '240k',
+              textBelow: 'Total Sale',
+            ),
+            ColumnText(textAbove: '100k', textBelow: 'Auctions'),
+            ColumnText(textAbove: '240k', textBelow: 'Artists'),
+          ],
+        )
+      ],
+    );
   }
 }
 
