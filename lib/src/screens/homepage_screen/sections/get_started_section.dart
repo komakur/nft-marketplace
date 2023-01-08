@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:nft_marketplace/constants/button_accent.dart';
 import 'package:nft_marketplace/constants/icons_constants.dart';
 import 'package:nft_marketplace/src/widgets/artist_card.dart';
-import 'package:nft_marketplace/src/widgets/primiry_button.dart';
+import 'package:nft_marketplace/src/widgets/buttons/filled_button.dart';
 import 'package:nft_marketplace/src/widgets/section_headline.dart';
 
 class GetStartedSection extends StatelessWidget {
@@ -18,9 +19,10 @@ class GetStartedSection extends StatelessWidget {
       const ArtistCard(),
       Padding(
         padding: const EdgeInsets.symmetric(vertical: 40.0),
-        child: PrimaryButton(
+        child: FilledButton(
           text: 'Get Started',
           icon: NFTMarketplaceIcons.kRocketLaunch,
+          buttonAccent: ButtonAccent.secondary,
           onPressed: () {},
         ),
       ),
