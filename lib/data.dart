@@ -46,3 +46,30 @@ class TopCreator {
     required this.place,
   });
 }
+
+const cardsHeading = <String>[
+  'Setup Your wallet',
+  'Create Collection',
+  'Start Earning',
+];
+
+const cardsSubheading = <String>[
+  'Set up your wallet of choice. Connect it to the NFT market by clicking the wallet icon in the top right corner.',
+  'Upload your work and setup your collection. Add a description, social links and floor price.',
+  'Choose between auctions and fixed-price listings. Start earning by selling your NFTs or trading others.',
+];
+
+abstract class InfoCardData {
+  static final info = List.generate(
+    cardsHeading.length,
+    (index) => InfoData(
+        heading: cardsHeading[index], subheading: cardsSubheading[index]),
+  );
+}
+
+class InfoData {
+  final String heading;
+  final String subheading;
+
+  InfoData({required this.heading, required this.subheading});
+}
