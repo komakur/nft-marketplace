@@ -79,7 +79,10 @@ class Homepage extends StatelessWidget {
             padding: EdgeInsets.only(top: 20.0, bottom: 40.0),
             child: MushroomsSection(),
           ),
-          HowItWorksSection(),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
+            child: HowItWorksSection(),
+          ),
         ],
       ),
     );
