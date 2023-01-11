@@ -49,7 +49,7 @@ class MainTheme {
       bodyMedium: _base.bodyMedium!.copyWith(
         color: ColorConstants.kText,
         fontFamily: 'WorkSans',
-        fontWeight: FontWeight.normal,
+        fontWeight: FontWeight.w400,
         fontSize: 16.0,
       ),
       // caption text (named in figma)
