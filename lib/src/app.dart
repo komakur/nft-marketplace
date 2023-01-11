@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nft_marketplace/constants/color_constants.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/homepage_screen.dart';
 import 'package:nft_marketplace/themes/main_theme.dart';
 
