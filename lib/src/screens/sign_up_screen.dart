@@ -34,12 +34,12 @@ class SignUp extends StatelessWidget {
                   'Create Account',
                   style: Theme.of(context).textTheme.displaySmall!,
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(bottom: 30.0, top: 20.0),
-                  child: const Text(
+                  child: Text(
                       'Welcome! enter your details and start creating, collecting and selling NFTs.'),
                 ),
-                Expanded(child: SingUpForm()),
+                const Expanded(child: SingUpForm()),
               ],
             ),
           ),

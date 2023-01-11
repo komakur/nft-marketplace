@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nft_marketplace/src/widgets/category_card.dart';
+import 'package:nft_marketplace/src/widgets/cards/category_card.dart';
 import 'package:nft_marketplace/src/widgets/section_headline.dart';
 
 class BrowseCategoriesSection extends StatelessWidget {

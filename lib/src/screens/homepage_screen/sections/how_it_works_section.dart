@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/data.dart';
-import 'package:nft_marketplace/src/widgets/info_card.dart';
+import 'package:nft_marketplace/src/widgets/cards/info_card.dart';
 import 'package:nft_marketplace/src/widgets/section_headline.dart';
 
 class HowItWorksSection extends StatelessWidget {

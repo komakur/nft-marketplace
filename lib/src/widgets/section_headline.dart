@@ -28,7 +28,6 @@ class SectionHeadline extends StatelessWidget {
                     .bodyMedium!
                     .copyWith(height: 1.4),
               ),
-        const SizedBox(height: 40.0),
       ],
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/constants/icons_constants.dart';
 import 'package:nft_marketplace/src/widgets/buttons/custom_outlined_button.dart';
-import 'package:nft_marketplace/src/widgets/nft_card.dart';
+import 'package:nft_marketplace/src/widgets/cards/nft_card.dart';
 import 'package:nft_marketplace/src/widgets/section_headline.dart';
 
 class DiscoverMoreSection extends StatelessWidget {

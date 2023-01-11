@@ -12,7 +12,7 @@ class FilledButton extends StatelessWidget {
   // defines a button height following Figma design. By default 'buttonAccent = ButtonAccent.tertiary', which sets 'heigth = 46'
   final ButtonAccent buttonAccent;
   final VoidCallback onPressed;
-
+// TODO: refactor String text => Text text (maybe Icon as well)
   const FilledButton({
     super.key,
     required this.text,
