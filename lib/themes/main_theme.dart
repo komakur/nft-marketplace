@@ -3,8 +3,6 @@ import 'package:nft_marketplace/constants/color_constants.dart';
 
 class MainTheme {
   static final _base = ThemeData.light().textTheme;
-  static final _buttonBase = ThemeData.light().textButtonTheme;
-  static final _inputTextFieldBase = ThemeData.light().inputDecorationTheme;
 
   static final theme = ThemeData(
     scaffoldBackgroundColor: ColorConstants.kBackground,

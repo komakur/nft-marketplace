@@ -19,8 +19,8 @@ abstract class ColorConstants {
     begin: Alignment.bottomCenter,
     end: Alignment.topCenter,
     colors: [
-      Color(0xFFA259FF).withOpacity(1),
-      Color(0xFF377DF7).withOpacity(0.0),
+      const Color(0xFFA259FF).withOpacity(1),
+      const Color(0xFF377DF7).withOpacity(0.0),
     ],
   );
   static const kPurpleRedGradient =
