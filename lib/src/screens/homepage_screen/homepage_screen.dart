@@ -6,6 +6,7 @@ import 'package:nft_marketplace/src/screens/homepage_screen/sections/discover_mo
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/get_started_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/how_it_works_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/mushrooms_section.dart';
+import 'package:nft_marketplace/src/screens/homepage_screen/sections/subscribe_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/top_creators_section.dart';
 import 'package:nft_marketplace/src/screens/homepage_screen/sections/trending_collection_section.dart';
 
@@ -82,6 +83,10 @@ class Homepage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
             child: HowItWorksSection(),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 30.0),
+            child: SubscribeSection(),
           ),
         ],
       ),
