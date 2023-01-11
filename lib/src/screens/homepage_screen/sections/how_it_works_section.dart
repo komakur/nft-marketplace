@@ -12,10 +12,19 @@ class HowItWorksSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SectionHeadline(
-            heading: 'How it Works', subheading: 'Find out how to get started'),
-        InfoCard(
-            heading: InfoCardData.info[0].heading,
-            description: InfoCardData.info[0].subheading)
+            heading: 'How it works', subheading: 'Find out how to get started'),
+        GridView.count(
+          crossAxisCount: 1,
+          shrinkWrap: true,
+          childAspectRatio: 315 / 157,
+          mainAxisSpacing: 20.0,
+          children: List.generate(
+            InfoCardData.info.length,
+            (index) => InfoCard(
+                heading: InfoCardData.info[index].heading,
+                description: InfoCardData.info[index].subheading),
+          ),
+        ),
       ],
     );
   }
